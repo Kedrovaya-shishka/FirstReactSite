@@ -1,0 +1,47 @@
+@use '../../vars' as *;
+.join {
+  position: relative;
+  margin-top: -20px;
+  border-radius: 20px 20px 0 0;
+  background: $peach;
+  padding-block: 100px 120px;
+  h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    margin-bottom: 32px;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+    border-bottom: 1px solid $ink;
+    &:focus-within {
+      border-bottom-width: 2px;
+    }
+    input {
+      flex: 1;
+      background: none;
+      border: 0;
+      outline: 0;
+      font: inherit;
+      font-size: 14px;
+      color: $ink;
+      padding: 14px 0;
+      &::placeholder {
+        color: $ink;
+      }
+    }
+    button {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: $ink;
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: -6px;
+    }
+  }
+  p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}

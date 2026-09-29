@@ -1,0 +1,73 @@
+@use '../../vars' as *;
+.stats {
+  background: $sky;
+  overflow: hidden;
+  h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    max-width: 12em;
+    margin-bottom: 40px;
+  }
+  ul {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+    width: min(100%, 620px);
+  }
+  li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 130px 1fr 32px;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px 24px;
+    .big {
+      font-size: 3rem;
+      font-weight: 300;
+    }
+    .unit {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .circle {
+      width: 32px;
+      height: 32px;
+      background: $sky;
+    }
+    .circle img {
+      width: 10px;
+    }
+    .source {
+      position: absolute;
+      right: 16px;
+      bottom: -14px;
+      z-index: 1;
+      background: $ink;
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 12px;
+    }
+  }
+  .note {
+    margin-top: 40px;
+    max-width: 32em;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .balloon {
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    width: min(330px, 34vw);
+  }
+  @media (max-width: 800px) {
+    .balloon {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px clamp(20px, 5vw, 72px) 56px;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.15), transparent 30%, rgba(0, 0, 0, 0.25)),
+    url('../../assets/IMAGE.png') center/cover no-repeat;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  }
+  h1 {
+    font-size: clamp(1.8rem, 3.6vw, 3rem);
+  }
+}

@@ -1,0 +1,34 @@
+@use '../../vars' as *;
+.frameworks {
+  background: $mint;
+  h2 {
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    max-width: 16em;
+  }
+  article {
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 16px;
+    color: #fff;
+    box-shadow: inset 0 -90px 60px -40px rgba(0, 0, 0, 0.45);
+    h3 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 12px;
+    }
+    .go {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #fff;
+      color: $ink;
+      display: grid;
+      place-items: center;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use './vars' as *;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $ink;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  font: inherit;
+  border: 0;
+  cursor: pointer;
+  background: none;
+  color: inherit;
+}
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+.wrap {
+  padding-inline: $pad;
+}
+.panel {
+  position: relative;
+  margin-top: -20px;
+  border-radius: 20px 20px 0 0;
+  padding-block: 80px;
+}
+.circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  &:focus-visible {
+    outline: 2px solid $ink;
+    outline-offset: 2px;
+  }
+}
+.arrows {
+  display: flex;
+  gap: 12px;
+}
+.viewport {
+  overflow: hidden;
+  padding-left: $pad;
+  margin-block: 40px;
+}
+.track {
+  --w: 300px;
+  --gap: 8px;
+  display: flex;
+  gap: var(--gap);
+  transition: transform 0.4s ease;
+  transform: translateX(calc(var(--i) * (var(--w) + var(--gap)) * -1));
+  > * {
+    flex: none;
+    width: var(--w);
+  }
+}
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  p {
+    max-width: 32em;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+}

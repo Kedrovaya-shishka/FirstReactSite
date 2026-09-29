@@ -1,0 +1,27 @@
+@use '../../vars' as *;
+.partners {
+  background: $cream;
+  .intro {
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    letter-spacing: 0.02em;
+    max-width: 22em;
+    margin-bottom: 64px;
+  }
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -10vw 64px;
+    img {
+      width: auto;
+      max-height: 36px;
+    }
+  }
+  .mission {
+    max-width: 34em;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
