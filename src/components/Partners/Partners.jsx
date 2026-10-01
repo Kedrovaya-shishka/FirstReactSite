@@ -7,22 +7,23 @@ import trav from '../../assets/Trav.png'
 import trip from '../../assets/Trip.png'
 import './Partners.scss'
 
-const logos = [ama, book, exp, goog, sky, trav, trip]
-
 export default function Partners() {
   return (
-    <section className="panel partners wrap">
-      <p className="intro">
+    <section className="partners">
+      <h2>
         Founded by Prince Harry, The Duke of Sussex, Travalyst is a coalition of
         some of the biggest names in travel:
-      </p>
+      </h2>
       <div className="logos">
-        {/* один img на каждый элемент массива */}
-        {logos.map((src, i) => (
-          <img key={i} src={src} alt="" />
-        ))}
+        <img src={ama} alt="" />
+        <img src={book} alt="" />
+        <img src={exp} alt="" />
+        <img src={goog} alt="" />
+        <img src={sky} alt="" />
+        <img src={trav} alt="" />
+        <img src={trip} alt="" />
       </div>
-      <p className="mission">
+      <p>
         Our mission is to make the travel industry more sustainable. We do this
         by convening leading industry players in a pre-competitive coalition to
         collaborate on bringing consistent sustainability information to the

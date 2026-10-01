@@ -1,55 +1,50 @@
-@use '../../vars' as *;
 .quotes {
-  background: $sage;
-  .grid {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    row-gap: 40px;
-    align-items: center;
-  }
-  .mark {
-    width: 28px;
-    align-self: start;
-    margin-top: 6px;
-  }
-  h2 {
-    font-size: clamp(1.3rem, 2vw, 1.7rem);
-    max-width: 24em;
-    margin-bottom: 40px;
-  }
-  .text {
-    font-size: 14px;
-    line-height: 1.5;
-    max-width: 34em;
-  }
-  .row {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    max-width: 520px;
-  }
-  .avatars {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
-    img {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      object-fit: cover;
-      transition:
-        width 0.2s,
-        height 0.2s;
-    }
-    .on img {
-      width: 56px;
-      height: 56px;
-    }
-  }
-  .who {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: -24px;
-  }
+  background: #d7dfd1;
+  padding: 80px 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.quotes .top {
+  display: flex;
+  gap: 32px;
+}
+.quotes .top img {
+  width: 28px;
+  height: 20px;
+}
+.quotes .text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 600px;
+}
+.quotes h2 {
+  font-size: 26px;
+}
+.quotes p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.quotes .row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 560px;
+}
+.quotes .avatars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 440px;
+}
+.quotes .big {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+.quotes .small {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
 }

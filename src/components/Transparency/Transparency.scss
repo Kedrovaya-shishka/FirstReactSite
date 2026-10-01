@@ -1,22 +1,23 @@
-@use '../../vars' as *;
 .transparency {
-  min-height: 70vh;
-  padding-block: 120px 80px;
-  color: #fff;
-  background:
-    linear-gradient(rgba(20, 35, 30, 0.4), transparent 55%),
-    url('../../assets/Fiov.png') center/cover no-repeat;
-  h2 {
-    color: $mint;
-    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-    max-width: 16em;
-    margin-bottom: 16px;
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
-  }
-  p {
-    max-width: 34em;
-    font-size: 14px;
-    line-height: 1.5;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
-  }
+  height: 600px;
+  padding: 120px 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: white;
+  background-image: url('../../assets/Fiov.png');
+  background-size: cover;
+  background-position: center;
+}
+.transparency h2 {
+  width: 600px;
+  font-size: 34px;
+  color: #ddeee8;
+  text-shadow: 0 0 8px black;
+}
+.transparency p {
+  width: 560px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-shadow: 0 0 6px black;
 }

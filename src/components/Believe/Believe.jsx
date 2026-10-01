@@ -1,30 +1,22 @@
-import { useState } from 'react'
 import './Believe.scss'
 
-const items = [
-  'Protect Wildlife',
-  'Preserve the Environment',
-  'Grow Tourism Responsibly',
-  'Reduce Emissions',
-]
-
 export default function Believe() {
-  const [active, setActive] = useState(0)
-
   return (
-    <section className="believe wrap">
-      <div>
-        <p className="lead">We believe that now is the time to:</p>
-        <ol>
-          {items.map((text, i) => (
-            <li key={text} className={i === active ? 'on' : ''}>
-              <button onClick={() => setActive(i)}>
-                <span>{i + 1}</span>
-                {text}
-              </button>
-            </li>
-          ))}
-        </ol>
+    <section className="believe">
+      <div className="list">
+        <p>We believe that now is the time to:</p>
+        <div className="item active">
+          <span>1</span>Protect Wildlife
+        </div>
+        <div className="item">
+          <span>2</span>Preserve the Environment
+        </div>
+        <div className="item">
+          <span>3</span>Grow Tourism Responsibly
+        </div>
+        <div className="item">
+          <span>4</span>Reduce Emissions
+        </div>
       </div>
       <p className="foot">
         We want to ensure that people can experience all the awe-inspiring

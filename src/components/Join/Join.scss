@@ -1,47 +1,35 @@
-@use '../../vars' as *;
 .join {
-  position: relative;
-  margin-top: -20px;
-  border-radius: 20px 20px 0 0;
-  background: $peach;
-  padding-block: 100px 120px;
-  h2 {
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    margin-bottom: 32px;
-  }
-  form {
-    display: flex;
-    align-items: center;
-    max-width: 640px;
-    border-bottom: 1px solid $ink;
-    &:focus-within {
-      border-bottom-width: 2px;
-    }
-    input {
-      flex: 1;
-      background: none;
-      border: 0;
-      outline: 0;
-      font: inherit;
-      font-size: 14px;
-      color: $ink;
-      padding: 14px 0;
-      &::placeholder {
-        color: $ink;
-      }
-    }
-    button {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: $ink;
-      color: #fff;
-      font-size: 16px;
-      margin-bottom: -6px;
-    }
-  }
-  p {
-    margin-top: 20px;
-    font-size: 14px;
-  }
+  background: #ecd0c0;
+  padding: 100px 260px 120px 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.join h2 {
+  font-size: 40px;
+}
+.join .form {
+  display: flex;
+  align-items: center;
+  width: 640px;
+  border-bottom: 1px solid #0d231f;
+}
+.join input {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 14px;
+  color: #0d231f;
+}
+.join .form button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0d231f;
+  color: white;
+}
+.join p {
+  font-size: 14px;
 }

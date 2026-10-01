@@ -1,28 +1,9 @@
-import { useState } from 'react'
-import Arrows from '../Arrows/Arrows'
 import './Partner.scss'
 
-const cards = [
-  {
-    title: 'Collaboration',
-    text: 'Creating game-changing impact through collaboration, sharing ideas and information in a supportive, pre-competitive structure.',
-  },
-  {
-    title: 'Scale',
-    text: 'Travalyst’s connections and access to world-renowned sustainability specialists and academics enable us to scale initiatives at speed.',
-  },
-  {
-    title: 'Networking',
-    text: 'Being part of a group of energising collaborators with a shared focus on changing the industry for the better.',
-  },
-]
-
 export default function Partner() {
-  const [index, setIndex] = useState(0)
-
   return (
-    <section className="panel partner" id="partner">
-      <div className="wrap">
+    <section className="partner" id="partner">
+      <div className="head">
         <h2>Become a Partner</h2>
         <p>
           Travalyst partners are part of a global network of change-makers,
@@ -31,22 +12,47 @@ export default function Partner() {
           partnership include:
         </p>
       </div>
-      <div className="viewport">
-        <div className="track" style={{ '--i': index }}>
-          {cards.map((c, i) => (
-            <article key={c.title}>
-              <span className="n">{i + 1}</span>
-              <div>
-                <h3>{c.title}</h3>
-                <p>{c.text}</p>
-              </div>
-            </article>
-          ))}
+
+      <div className="cards">
+        <div className="card">
+          <span className="n">1</span>
+          <div>
+            <h3>Collaboration</h3>
+            <p>
+              Creating game-changing impact through collaboration, sharing ideas
+              and information in a supportive, pre-competitive structure.
+            </p>
+          </div>
+        </div>
+        <div className="card">
+          <span className="n">2</span>
+          <div>
+            <h3>Scale</h3>
+            <p>
+              Travalyst’s connections and access to world-renowned
+              sustainability specialists and academics enable us to scale
+              initiatives at speed.
+            </p>
+          </div>
+        </div>
+        <div className="card">
+          <span className="n">3</span>
+          <div>
+            <h3>Networking</h3>
+            <p>
+              Being part of a group of energising collaborators with a shared
+              focus on changing the industry for the better.
+            </p>
+          </div>
         </div>
       </div>
-      <div className="wrap bar">
+
+      <div className="bottom">
         <button className="more">Learn More</button>
-        <Arrows index={index} count={cards.length} setIndex={setIndex} />
+        <div className="arrows">
+          <button className="circle">←</button>
+          <button className="circle">→</button>
+        </div>
       </div>
     </section>
   )

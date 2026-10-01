@@ -1,44 +1,39 @@
-import { useState } from 'react'
-import Arrows from '../Arrows/Arrows'
 import a from '../../assets/ffon.png'
 import b from '../../assets/fffon.png'
 import c from '../../assets/ffffon.png'
 import './Frameworks.scss'
 
-const cards = [
-  { img: a, title: 'Aviation', sub: 'View Framework' },
-  { img: b, title: 'Accommodation', sub: 'View Framework' },
-  { img: c, title: 'Coming Soon', sub: 'We’ll be working on more' },
-]
-
 export default function Frameworks() {
-  const [index, setIndex] = useState(0)
-
   return (
-    <section className="panel frameworks">
-      <div className="wrap">
-        <h2>
-          We're aligning on sustainability frameworks, across the industry
-        </h2>
-      </div>
-      <div className="viewport">
-        <div className="track" style={{ '--i': index }}>
-          {cards.map((card) => (
-            <article
-              key={card.title}
-              style={{ backgroundImage: `url(${card.img})` }}
-            >
-              <div>
-                <h3>{card.title}</h3>
-                <p>{card.sub}</p>
-              </div>
-              <span className="go">→</span>
-            </article>
-          ))}
+    <section className="frameworks">
+      <h2>We're aligning on sustainability frameworks, across the industry</h2>
+
+      <div className="cards">
+        <div className="card" style={{ backgroundImage: `url(${a})` }}>
+          <div>
+            <h3>Aviation</h3>
+            <p>View Framework</p>
+          </div>
+          <span>→</span>
+        </div>
+        <div className="card" style={{ backgroundImage: `url(${b})` }}>
+          <div>
+            <h3>Accommodation</h3>
+            <p>View Framework</p>
+          </div>
+          <span>→</span>
+        </div>
+        <div className="card" style={{ backgroundImage: `url(${c})` }}>
+          <div>
+            <h3>Coming Soon</h3>
+            <p>We’ll be working on more</p>
+          </div>
+          <span>→</span>
         </div>
       </div>
-      <div className="wrap bar">
-        <div>
+
+      <div className="bottom">
+        <div className="texts">
           <p>
             By coming together, we create a shared understanding of what
             sustainability means, and source reliable sustainability data that
@@ -55,7 +50,10 @@ export default function Frameworks() {
             from travellers.
           </p>
         </div>
-        <Arrows index={index} count={cards.length} setIndex={setIndex} />
+        <div className="arrows">
+          <button className="circle">←</button>
+          <button className="circle">→</button>
+        </div>
       </div>
     </section>
   )

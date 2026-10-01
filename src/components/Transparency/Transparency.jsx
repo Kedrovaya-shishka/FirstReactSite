@@ -2,7 +2,7 @@ import './Transparency.scss'
 
 export default function Transparency() {
   return (
-    <section className="transparency wrap">
+    <section className="transparency">
       <h2>
         Travellers, meanwhile, are given transparency in the booking process
       </h2>

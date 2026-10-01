@@ -1,54 +1,71 @@
-@use '../../vars' as *;
 .partner {
-  background: $cream;
-  h2 {
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    margin-bottom: 24px;
-  }
-  .wrap > p {
-    max-width: 34em;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .track {
-    --w: 270px;
-    --gap: 4px;
-  }
-  article {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-    .n {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: $ink;
-      color: #fff;
-      font-size: 13px;
-      display: grid;
-      place-items: center;
-    }
-    h3 {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-    }
-    p {
-      font-size: 13px;
-      line-height: 1.4;
-    }
-  }
-  .more {
-    background: $sand;
-    border-radius: 20px;
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-  .circle {
-    background: $sand;
-  }
+  background: #f0f1e6;
+  padding: 80px 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.partner .head {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.partner h2 {
+  font-size: 40px;
+}
+.partner .head p {
+  width: 540px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.partner .cards {
+  display: flex;
+  gap: 4px;
+  overflow: hidden;
+}
+.partner .card {
+  width: 270px;
+  height: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+.partner .n {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0d231f;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 28px;
+}
+.partner .card h3 {
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+.partner .card p {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.partner .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.partner .more {
+  padding: 12px 24px;
+  border-radius: 20px;
+  background: #dedfce;
+  font-size: 14px;
+}
+.partner .arrows {
+  display: flex;
+  gap: 12px;
+}
+.partner .circle {
+  background: #dedfce;
 }

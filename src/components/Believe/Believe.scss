@@ -1,52 +1,50 @@
-@use '../../vars' as *;
 .believe {
-  min-height: 100vh;
+  height: 100vh;
+  padding: 72px 260px 56px 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-block: 72px 56px;
-  color: #fff;
-  background: url('../../assets/Mount.png') center/cover no-repeat;
-  .lead {
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-  ol {
-    list-style: none;
-    display: grid;
-    gap: 14px;
-  }
-  button {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    text-align: left;
-    color: #fff;
-    font-size: clamp(1.4rem, 2.4vw, 2rem);
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    span {
-      flex: none;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: $sand;
-      color: $ink;
-      font-size: 12px;
-      display: grid;
-      place-items: center;
-    }
-  }
-  .on button {
-    color: $lemon;
-    span {
-      background: $lemon;
-    }
-  }
-  .foot {
-    max-width: 34em;
-    font-size: 14px;
-    line-height: 1.5;
-    color: $lemon;
-  }
+  color: white;
+  background-image: url('../../assets/Mount.png');
+  background-size: cover;
+  background-position: center;
+}
+.believe .list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.believe .list p {
+  font-size: 14px;
+}
+.believe .item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+}
+.believe .item span {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #dedfce;
+  color: #0d231f;
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+}
+.believe .active {
+  color: #eaeab6;
+}
+.believe .active span {
+  background: #eaeab6;
+}
+.believe .foot {
+  width: 540px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #eaeab6;
 }
